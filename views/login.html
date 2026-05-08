@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/login" aria-current="page">Login</a>
+      </nav>
+    </header>
+    <main class="main login-main">
+      <h1 class="page-title">Login / Register</h1>
+
+      <section class="card" aria-labelledby="email-otp-heading">
+        <h2 id="email-otp-heading">Email + OTP</h2>
+        <p class="muted">Sign in or create an account using your email and a one-time code.</p>
+        <form class="form" action="/login/email-otp" method="post">
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+          </label>
+          <label class="field">
+            <span>One-time code</span>
+            <input
+              type="text"
+              name="otp"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              placeholder="Enter OTP"
+            />
+          </label>
+          <div class="actions">
+            <button type="button" class="btn btn-secondary" disabled title="Wire up OTP delivery next">
+              Send OTP
+            </button>
+            <button type="submit" class="btn btn-primary">Continue with email</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="social-heading">
+        <h2 id="social-heading">Social platforms</h2>
+        <p class="muted">Continue with a linked social account.</p>
+        <div class="social-actions">
+          <a class="btn btn-google" href="#" role="button" aria-disabled="true">Continue with Google</a>
+          <a class="btn btn-facebook" href="#" role="button" aria-disabled="true">Continue with Facebook</a>
+        </div>
+        <p class="hint">OAuth URLs are not configured yet; buttons are placeholders for Cognito / IdP wiring.</p>
+      </section>
+    </main>
+  </body>
+</html>

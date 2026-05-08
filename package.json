@@ -1,0 +1,17 @@
+{
+  "name": "sso-cognito",
+  "version": "1.0.0",
+  "description": "Express app with homepage and login (email OTP + social placeholders)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
