@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Yorkshire Cricket (demo)</title>
+    <link rel="icon" href="/assets/yccc/yorkshire-badge.webp" type="image/webp" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+  </head>
+  <body class="dashboard-body">
+    <a class="skip-link" href="#dashboard-main">Skip to content</a>
+
+    <div class="yccc-topbar" aria-label="Utility links">
+      <a href="#">Sponsors</a>
+      <a href="#">Yorkshire Cricket TV</a>
+      <a href="#">Shop</a>
+      <a href="#">Members Hub</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <header class="yccc-masthead">
+      <div class="yccc-masthead-inner">
+        <a class="yccc-brand" href="/">
+          <img
+            class="yccc-brand-mark"
+            src="/assets/yorkshire-yccc-rose.svg"
+            alt=""
+            width="82"
+            height="44"
+            decoding="async"
+          />
+          <span class="yccc-brand-text">Yorkshire County Cricket Club</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="dashboard-main" class="dashboard-main">
+      <section class="dashboard-card">
+        <h1>Fan Dashboard</h1>
+        <p class="dashboard-sub">Signed in fan details decoded from token.</p>
+        <p id="dashboard-error" class="dashboard-error" hidden role="alert"></p>
+        <dl class="dashboard-list">
+          <div>
+            <dt>Fan ID</dt>
+            <dd id="fan-id">-</dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd id="fan-email">-</dd>
+          </div>
+          <div>
+            <dt>Tenant</dt>
+            <dd id="tenant-id">-</dd>
+          </div>
+        </dl>
+        <button id="btn-logout" type="button" class="btn btn-primary">Logout</button>
+      </section>
+    </main>
+
+    <script src="/js/dashboard.js" defer></script>
+  </body>
+</html>
