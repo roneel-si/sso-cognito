@@ -1,20 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
+    <title>Yorkshire County Cricket Club | Homepage (demo)</title>
+    <link rel="icon" href="/assets/yccc/yorkshire-badge.webp" type="image/webp" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/home.css" />
   </head>
-  <body>
-    <header class="site-header">
-      <nav class="nav">
-        <a href="/">Home</a>
-        <a href="/login">Login</a>
-      </nav>
+  <body class="yccc-home">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="yccc-topbar" aria-label="Utility links">
+      <a href="#">Sponsors</a>
+      <a href="#">Yorkshire Cricket TV</a>
+      <a href="#">Shop</a>
+      <a href="#">Members Hub</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <header class="yccc-masthead">
+      <div class="yccc-masthead-inner">
+        <a class="yccc-brand" href="/">
+          <img
+            class="yccc-brand-mark"
+            src="/assets/yorkshire-yccc-rose.svg"
+            alt=""
+            width="82"
+            height="44"
+            decoding="async"
+          />
+          <span class="yccc-brand-text">Yorkshire County Cricket Club</span>
+        </a>
+        <nav class="yccc-nav" aria-label="Primary">
+          <a href="#">News</a>
+          <a href="#">Fixtures</a>
+          <a href="#">Tickets</a>
+          <a href="#">Memberships</a>
+          <a href="#">Hospitality</a>
+          <a href="#">Club</a>
+          <a href="/login" class="nav-login">Login</a>
+        </nav>
+      </div>
     </header>
-    <main class="main">
-      <h1>homepage</h1>
-    </main>
+
+    <section class="yccc-hero" aria-labelledby="hero-heading">
+      <div class="yccc-hero-bg" role="presentation"></div>
+      <div class="yccc-hero-overlay" role="presentation"></div>
+      <div class="yccc-hero-inner" id="main">
+        <p class="yccc-hero-kicker">Cricket · 7 May 26</p>
+        <h1 id="hero-heading">Vote for your Vertu Player of the Month for April!</h1>
+        <p class="yccc-hero-tagline">Men’s &amp; Women’s player of the month · cast your vote</p>
+      </div>
+    </section>
+
+    <section class="yccc-matches" aria-label="Upcoming fixtures">
+      <article class="yccc-match-card">
+        <div class="yccc-match-card-inner">
+          <div class="yccc-match-card-head">
+            <p class="yccc-match-kicker">Next match</p>
+            <p class="yccc-match-date">Friday 08 May 2026 — 11:00 · Rothesay County Championship</p>
+          </div>
+          <div class="yccc-match-teams">
+            <div class="yccc-team-pill">
+              <img src="/assets/yccc/warwickshire.webp" alt="" width="56" height="56" />
+              <span>Warwickshire</span>
+            </div>
+            <span class="yccc-vs">VS</span>
+            <div class="yccc-team-pill">
+              <img src="/assets/yccc/yorkshire-badge.webp" alt="" width="56" height="56" />
+              <span>Yorkshire Men</span>
+            </div>
+          </div>
+          <p class="yccc-venue">Edgbaston, Birmingham</p>
+          <div class="yccc-match-actions">
+            <a class="yccc-pill-btn" href="#">Match Centre</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="yccc-match-card">
+        <div class="yccc-match-card-inner">
+          <div class="yccc-match-card-head">
+            <p class="yccc-match-kicker">Next match</p>
+            <p class="yccc-match-date">Wednesday 13 May 2026 — 10:30 · Metro Bank One Day Cup Women</p>
+          </div>
+          <div class="yccc-match-teams">
+            <div class="yccc-team-pill">
+              <img src="/assets/yccc/yorkshire-badge.webp" alt="" width="56" height="56" />
+              <span>Yorkshire Women</span>
+            </div>
+            <span class="yccc-vs">VS</span>
+            <div class="yccc-team-pill">
+              <img src="/assets/yccc/hampshire.webp" alt="" width="56" height="56" />
+              <span>Hampshire Women</span>
+            </div>
+          </div>
+          <p class="yccc-venue">Clifton Park, York</p>
+          <div class="yccc-match-actions">
+            <a class="yccc-pill-btn yccc-pill-btn--ghost" href="#">Match Centre</a>
+            <a class="yccc-pill-btn" href="#">Buy tickets</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="yccc-section" aria-labelledby="news-heading">
+      <div class="yccc-section-head">
+        <h2 id="news-heading">Latest News</h2>
+        <a class="yccc-link" href="#">View all News + Events</a>
+      </div>
+      <div class="yccc-news-grid">
+        <article class="yccc-news-card">
+          <img src="/assets/yccc/news-1.webp" alt="" width="390" height="220" />
+          <div class="yccc-news-body">
+            <p class="yccc-news-meta">Cricket · 7 May 26</p>
+            <h3>Vote for your Vertu Player of the Month for April!</h3>
+            <p>
+              Cast your vote for the stand-out Yorkshire Men's Vertu player of the month for April &amp; be in with a
+              chance of winning a signed Yorkshire Men's shirt!
+            </p>
+            <a class="yccc-readmore" href="#">Read more</a>
+          </div>
+        </article>
+        <article class="yccc-news-card">
+          <img src="/assets/yccc/news-2.webp" alt="" width="390" height="220" />
+          <div class="yccc-news-body">
+            <p class="yccc-news-meta">Cricket · 7 May 26</p>
+            <h3>Vote for your SportsBreaks Player of the Month for April!</h3>
+            <p>
+              Cast your vote for the stand-out Yorkshire Women's SportsBreaks player of the month for April &amp; be
+              in with a chance of winning a signed Yorkshire Women's shirt!
+            </p>
+            <a class="yccc-readmore" href="#">Read more</a>
+          </div>
+        </article>
+        <article class="yccc-news-card">
+          <img src="/assets/yccc/news-3.webp" alt="" width="390" height="220" />
+          <div class="yccc-news-body">
+            <p class="yccc-news-meta">Yorkshire · 7 May 26</p>
+            <h3>Warwickshire v Yorkshire Men, Rothesay County Championship Preview</h3>
+            <p>
+              Matthew Revis is relishing the prospect of Harry Brook’s return to Yorkshire’s team for the next fortnight,
+              the England batting star lining up for the county against Warwickshire and then Surrey.
+            </p>
+            <a class="yccc-readmore" href="#">Read more</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="yccc-section" aria-labelledby="foundation-heading">
+      <div class="yccc-foundation">
+        <img src="/assets/yccc/foundation-hero.webp" alt="Yorkshire Cricket Foundation community work" width="720" height="540" />
+        <div class="yccc-foundation-copy">
+          <h2 id="foundation-heading">Yorkshire Cricket Foundation</h2>
+          <h3>Using the power of cricket, our Foundation aims to make a lasting, positive impact on the lives of those living in Yorkshire</h3>
+          <p>
+            Using our key themes; Health &amp; Wellbeing, Heritage and Participation, we use the brand of Yorkshire
+            Cricket to affect communities all over the county, regardless of age, religion or ability.
+          </p>
+          <a class="yccc-pill-btn" href="#">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="yccc-section" aria-labelledby="results-heading">
+      <div class="yccc-section-head">
+        <h2 id="results-heading">Latest Results</h2>
+        <a class="yccc-link" href="#">View all results</a>
+      </div>
+      <div class="yccc-results">
+        <div class="yccc-result-row">
+          <img src="/assets/yccc/yorkshire-badge.webp" alt="" width="40" height="40" />
+          <div class="yccc-result-main">
+            <strong>Yorkshire Women 257/10 vs Essex Women 270/8 — Essex Women win by 13 runs</strong>
+            <span class="yccc-result-meta">Saturday 02 May 2026 · Metro Bank One Day Cup Women · Headingley, Leeds</span>
+          </div>
+          <span class="yccc-result-tag">Result</span>
+        </div>
+        <div class="yccc-result-row">
+          <img src="/assets/yccc/result-somerset.webp" alt="" width="40" height="40" />
+          <div class="yccc-result-main">
+            <strong>Somerset 274 &amp; 184/10 vs Yorkshire Men 162 &amp; 371 — Yorkshire win by 75 runs</strong>
+            <span class="yccc-result-meta">Friday 01 May 2026 · Rothesay County Championship · Taunton</span>
+          </div>
+          <span class="yccc-result-tag">Highlights</span>
+        </div>
+        <div class="yccc-result-row">
+          <img src="/assets/yccc/result-durham.webp" alt="" width="40" height="40" />
+          <div class="yccc-result-main">
+            <strong>Yorkshire Women 290/10 vs Durham Women 290/8 — Match Tied</strong>
+            <span class="yccc-result-meta">Wednesday 29 April 2026 · Metro Bank One Day Cup Women · Scarborough</span>
+          </div>
+          <span class="yccc-result-tag">Highlights</span>
+        </div>
+        <div class="yccc-result-row">
+          <img src="/assets/yccc/result-lancashire.webp" alt="" width="40" height="40" />
+          <div class="yccc-result-main">
+            <strong>Lancashire Women 158/10 vs Yorkshire Women 241 — Yorkshire Women win by 83 runs</strong>
+            <span class="yccc-result-meta">Saturday 25 April 2026 · Metro Bank One Day Cup Women · Old Trafford</span>
+          </div>
+          <span class="yccc-result-tag">Highlights</span>
+        </div>
+        <div class="yccc-result-row">
+          <img src="/assets/yccc/result-sussex.webp" alt="" width="40" height="40" />
+          <div class="yccc-result-main">
+            <strong>Yorkshire Men 511 vs Sussex Sharks 502 &amp; 324/8 — Match Drawn</strong>
+            <span class="yccc-result-meta">Friday 24 April 2026 · Rothesay County Championship · Headingley, Leeds</span>
+          </div>
+          <span class="yccc-result-tag">Highlights</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="yccc-section" aria-labelledby="teams-heading">
+      <div class="yccc-section-head">
+        <h2 id="teams-heading">Our Teams</h2>
+        <a class="yccc-link" href="#">Go to teams</a>
+      </div>
+      <div class="yccc-teams">
+        <div class="yccc-team-card">
+          <img src="/assets/yccc/team-men.webp" alt="" width="200" height="286" />
+          <h3>Yorkshire Men</h3>
+        </div>
+        <div class="yccc-team-card">
+          <img src="/assets/yccc/team-women.webp" alt="" width="200" height="286" />
+          <h3>Yorkshire Women</h3>
+        </div>
+        <div class="yccc-team-card">
+          <img src="/assets/yccc/team-academy.webp" alt="" width="200" height="286" />
+          <h3>Yorkshire Academy</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="yccc-section" aria-labelledby="discover-heading">
+      <div class="yccc-section-head">
+        <h2 id="discover-heading">Discover</h2>
+      </div>
+      <div class="yccc-discover">
+        <a class="yccc-discover-card" href="#">
+          <img src="/assets/yccc/discover-membership.webp" alt="" width="390" height="220" />
+          <h3>Memberships</h3>
+          <p>
+            Yorkshire CCC is delighted to have released its 2026 memberships, with a new offering designed to make
+            attending cricket as a member more flexible and provide great value for money for supporters.
+          </p>
+          <span>Find out more</span>
+        </a>
+        <a class="yccc-discover-card" href="#">
+          <img src="/assets/yccc/discover-hospitality.webp" alt="" width="390" height="220" />
+          <h3>Hospitality at Headingley</h3>
+          <p>
+            Headingley hospitality is about more than what happens on the pitch. It’s an elevated experience where
+            world-class cricket meets outstanding food and drink, exceptional service and a vibrant social atmosphere.
+          </p>
+          <span>Find out more</span>
+        </a>
+        <a class="yccc-discover-card" href="#">
+          <img src="/assets/yccc/discover-headingley.webp" alt="" width="390" height="220" />
+          <h3>Headingley</h3>
+          <p>
+            Find out everything you need to know if you are visiting the home of Yorkshire CCC and Northern Superchargers.
+          </p>
+          <span>Find out more</span>
+        </a>
+        <a class="yccc-discover-card" href="#">
+          <img src="/assets/yccc/discover-tours.webp" alt="" width="390" height="220" />
+          <h3>Stadium Tours</h3>
+          <p>
+            A tour of Headingley gives you an opportunity to go behind the scenes at the most successful club in English
+            cricketing history.
+          </p>
+          <span>Find out more</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="yccc-section">
+      <div class="yccc-shop">
+        <h2>Club Shop</h2>
+        <p>Kit, gifts, and member offers — visit the official Yorkshire Cricket club shop.</p>
+        <a class="yccc-shop-btn" href="#">Visit the club shop</a>
+      </div>
+    </section>
+
+    <section class="yccc-section" aria-labelledby="newsletter-heading">
+      <div class="yccc-newsletter">
+        <img src="/assets/yccc/newsletter.webp" alt="" width="550" height="413" />
+        <div>
+          <h3 id="newsletter-heading">Sign up to our newsletter</h3>
+          <p>
+            For all the latest news, previews, ticket, membership and Premium Experiences information and more exciting
+            content from Yorkshire Cricket straight to your inbox, subscribe now.
+          </p>
+          <form class="yccc-input-row" action="#" method="get" onsubmit="return false;">
+            <input type="email" name="email" placeholder="Your email address" autocomplete="email" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="yccc-footer">
+      <div class="yccc-footer-inner">
+        <div class="yccc-sponsors" aria-label="Main sponsors">
+          <img src="/assets/yccc/sponsor-cc.webp" alt="Partner logo" />
+          <img src="/assets/yccc/sponsor-nic.webp" alt="NIC Services Group" />
+          <img src="/assets/yccc/sponsor-vertu.webp" alt="Vertu Motors" />
+          <img src="/assets/yccc/sponsor-dafabet.webp" alt="Dafabet" />
+          <img src="/assets/yccc/sponsor-castore.webp" alt="Castore" />
+          <img src="/assets/yccc/sponsor-sodexo.webp" alt="Sodexo" />
+          <img src="/assets/yccc/sponsor-ccib.webp" alt="C&amp;C Insurance Brokers" />
+          <img src="/assets/yccc/sponsor-titan.webp" alt="Titan Wealth" />
+        </div>
+        <p class="yccc-footer-note">
+          Demo homepage for local development. Layout and copy mirror the public
+          <a class="yccc-link" href="https://yorkshireccc.com/" style="color: #cbd5e1">yorkshireccc.com</a>
+          homepage; images were downloaded from that site for offline use. All rights in marks and media remain with
+          their respective owners.
+        </p>
+        <div class="yccc-footer-links">
+          <a href="#">Careers</a>
+          <a href="#">Privacy Policies</a>
+          <a href="#">Cookies Policy</a>
+          <a href="#">Safeguarding</a>
+          <a href="/login">Member login</a>
+        </div>
+        <p class="yccc-copyright">Copyright © 2026 The Yorkshire County Cricket Club Limited. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

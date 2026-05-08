@@ -1,57 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Login | Yorkshire Cricket (demo)</title>
+    <link rel="icon" href="/assets/yccc/yorkshire-badge.webp" type="image/webp" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
-  <body>
-    <header class="site-header">
-      <nav class="nav">
-        <a href="/">Home</a>
-        <a href="/login" aria-current="page">Login</a>
-      </nav>
+  <body class="login-body">
+    <a class="skip-link" href="#login-main">Skip to content</a>
+
+    <div class="yccc-topbar" aria-label="Utility links">
+      <a href="#">Sponsors</a>
+      <a href="#">Yorkshire Cricket TV</a>
+      <a href="#">Shop</a>
+      <a href="#">Members Hub</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <header class="yccc-masthead">
+      <div class="yccc-masthead-inner">
+        <a class="yccc-brand" href="/">
+          <img
+            class="yccc-brand-mark"
+            src="/assets/yorkshire-yccc-rose.svg"
+            alt=""
+            width="82"
+            height="44"
+            decoding="async"
+          />
+          <span class="yccc-brand-text">Yorkshire County Cricket Club</span>
+        </a>
+        <nav class="yccc-nav" aria-label="Primary">
+          <a href="#">News</a>
+          <a href="#">Fixtures</a>
+          <a href="#">Tickets</a>
+          <a href="#">Memberships</a>
+          <a href="#">Hospitality</a>
+          <a href="#">Club</a>
+          <a href="/login" class="nav-login" aria-current="page">Login</a>
+        </nav>
+      </div>
     </header>
-    <main class="main login-main">
-      <h1 class="page-title">Login / Register</h1>
 
-      <section class="card" aria-labelledby="email-otp-heading">
-        <h2 id="email-otp-heading">Email + OTP</h2>
-        <p class="muted">Sign in or create an account using your email and a one-time code.</p>
-        <form class="form" action="/login/email-otp" method="post">
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
-          </label>
-          <label class="field">
-            <span>One-time code</span>
-            <input
-              type="text"
-              name="otp"
-              inputmode="numeric"
-              autocomplete="one-time-code"
-              placeholder="Enter OTP"
-            />
-          </label>
-          <div class="actions">
-            <button type="button" class="btn btn-secondary" disabled title="Wire up OTP delivery next">
-              Send OTP
-            </button>
-            <button type="submit" class="btn btn-primary">Continue with email</button>
+    <main class="login-main-wrap" id="login-main">
+      <div class="auth-page">
+        <aside class="auth-visual" aria-hidden="true">
+          <div class="auth-visual-bg"></div>
+          <div class="auth-visual-content">
+            <div class="auth-visual-badge">
+              <img src="/assets/yccc/yorkshire-badge.webp" alt="" width="28" height="28" />
+              Yorkshire Cricket
+            </div>
+            <h1>Welcome back</h1>
+            <p>
+              Sign in to manage tickets, memberships, and your supporter profile. This screen is a static demo for your
+              SSO proof of concept.
+            </p>
           </div>
-        </form>
-      </section>
+        </aside>
 
-      <section class="card" aria-labelledby="social-heading">
-        <h2 id="social-heading">Social platforms</h2>
-        <p class="muted">Continue with a linked social account.</p>
-        <div class="social-actions">
-          <a class="btn btn-google" href="#" role="button" aria-disabled="true">Continue with Google</a>
-          <a class="btn btn-facebook" href="#" role="button" aria-disabled="true">Continue with Facebook</a>
+        <div class="auth-panel">
+          <h2>Sign in or register</h2>
+          <p class="auth-sub">Choose email and OTP, or continue with a social account.</p>
+
+          <section class="auth-card" aria-labelledby="email-otp-heading">
+            <h3 id="email-otp-heading">Email + OTP</h3>
+            <p class="muted">We’ll send a one-time code to your inbox when delivery is wired up.</p>
+            <form class="auth-form" action="/login/email-otp" method="post">
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+              </label>
+              <label class="field">
+                <span>One-time code</span>
+                <input
+                  type="text"
+                  name="otp"
+                  inputmode="numeric"
+                  autocomplete="one-time-code"
+                  placeholder="Enter OTP from email"
+                />
+              </label>
+              <div class="auth-actions">
+                <button type="button" class="btn btn-secondary" disabled title="Connect your email provider / Cognito next">
+                  Send OTP
+                </button>
+                <button type="submit" class="btn btn-primary">Continue with email</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="auth-card" aria-labelledby="social-heading">
+            <h3 id="social-heading">Social sign-in</h3>
+            <p class="muted">Use Google or Facebook once OAuth is configured.</p>
+            <div class="auth-divider" role="presentation">Or</div>
+            <div class="social-grid">
+              <a class="btn-google" href="#" role="button" aria-disabled="true">
+                <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+                  <path
+                    fill="#FFC107"
+                    d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"
+                  />
+                  <path
+                    fill="#FF3D00"
+                    d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"
+                  />
+                  <path
+                    fill="#4CAF50"
+                    d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.86 11.86 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"
+                  />
+                  <path
+                    fill="#1976D2"
+                    d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"
+                  />
+                </svg>
+                Continue with Google
+              </a>
+              <a class="btn-facebook" href="#" role="button" aria-disabled="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+                Continue with Facebook
+              </a>
+            </div>
+            <p class="auth-hint">
+              OAuth redirect URLs are not configured yet. Hook these buttons to Amazon Cognito hosted UI or your IdP when
+              ready.
+            </p>
+          </section>
         </div>
-        <p class="hint">OAuth URLs are not configured yet; buttons are placeholders for Cognito / IdP wiring.</p>
-      </section>
+      </div>
     </main>
   </body>
 </html>

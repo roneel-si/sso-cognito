@@ -4,158 +4,118 @@
   box-sizing: border-box;
 }
 
+:root {
+  --yccc-navy: #071422;
+  --yccc-navy-mid: #0c2340;
+  --yccc-blue: #0f4c81;
+  --yccc-sky: #e8f1f8;
+  --yccc-gold: #c9a227;
+  --yccc-white: #ffffff;
+  --yccc-muted: #94a3b8;
+  --yccc-text: #0f172a;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.5;
-  color: #0f172a;
-  background: #f1f5f9;
+  color: var(--yccc-text);
+  background: var(--yccc-sky);
 }
 
-.site-header {
-  background: #0f172a;
-  color: #f8fafc;
-  padding: 0.75rem 1.25rem;
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-.nav {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav a {
-  color: #e2e8f0;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.nav a:hover {
-  color: #fff;
-}
-
-.main {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: 2rem 1.25rem;
-}
-
-.login-main {
-  max-width: 28rem;
-}
-
-.page-title {
-  margin: 0 0 1.5rem;
-  font-size: 1.75rem;
-}
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.25rem;
-  box-shadow: 0 1px 3px rgb(15 23 42 / 0.08);
-}
-
-.card h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.125rem;
-}
-
-.muted {
-  margin: 0 0 1rem;
-  color: #64748b;
-  font-size: 0.9375rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #334155;
-}
-
-.field input {
-  padding: 0.6rem 0.75rem;
-  border: 1px solid #cbd5e1;
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+  padding: 0.75rem 1rem;
+  background: var(--yccc-white);
+  color: var(--yccc-navy);
   border-radius: 8px;
-  font-size: 1rem;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 0.2);
 }
 
-.field input:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 1px;
-  border-color: #3b82f6;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.25rem;
-}
-
+/* Shared form controls (login + any future forms) */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 0.9375rem;
   text-decoration: none;
   border: none;
   cursor: pointer;
   font-family: inherit;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
 .btn:disabled,
 .btn[aria-disabled="true"] {
-  opacity: 0.65;
+  opacity: 0.55;
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .btn-primary {
-  background: #2563eb;
+  background: linear-gradient(135deg, #1d6fd4, #0b4f8c);
   color: #fff;
+  box-shadow: 0 4px 14px rgb(15 76 129 / 0.35);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgb(15 76 129 / 0.45);
 }
 
 .btn-secondary {
-  background: #e2e8f0;
-  color: #0f172a;
+  background: rgb(255 255 255 / 0.12);
+  color: #e2e8f0;
+  border: 1px solid rgb(255 255 255 / 0.2);
 }
 
-.social-actions {
+.btn-secondary:hover:not(:disabled) {
+  background: rgb(255 255 255 / 0.18);
+}
+
+.field {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.btn-google {
-  background: #fff;
-  color: #1f2937;
-  border: 1px solid #d1d5db;
-}
-
-.btn-facebook {
-  background: #1877f2;
-  color: #fff;
-}
-
-.hint {
-  margin: 1rem 0 0;
+  gap: 0.35rem;
   font-size: 0.8125rem;
-  color: #94a3b8;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.field input {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgb(7 20 34 / 0.65);
+  color: #f8fafc;
+}
+
+.field input::placeholder {
+  color: #64748b;
+}
+
+.field input:focus {
+  outline: 2px solid #38bdf8;
+  outline-offset: 1px;
+  border-color: #38bdf8;
 }

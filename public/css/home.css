@@ -1,0 +1,713 @@
+/* Yorkshire CCC–inspired layout; imagery copied from yorkshireccc.com for local demo */
+
+.yccc-home {
+  background: #f4f7fb;
+  color: var(--yccc-text);
+}
+
+.yccc-topbar {
+  background: #0a1628;
+  color: #cbd5e1;
+  font-size: 0.8125rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  padding: 0.4rem 1.5rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.06);
+}
+
+.yccc-topbar a {
+  color: #e2e8f0;
+  text-decoration: none;
+}
+
+.yccc-topbar a:hover {
+  text-decoration: underline;
+}
+
+.yccc-masthead {
+  background: linear-gradient(180deg, #0c2340 0%, #071422 100%);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.25);
+}
+
+.yccc-masthead-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.65rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.yccc-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.yccc-brand-mark {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.yccc-brand-text {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  line-height: 1.2;
+  max-width: 11rem;
+}
+
+.yccc-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  align-items: center;
+}
+
+.yccc-nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.yccc-nav a:hover,
+.yccc-nav a[aria-current="page"] {
+  color: #fff;
+  border-bottom-color: var(--yccc-gold);
+}
+
+.yccc-nav .nav-login {
+  margin-left: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: var(--yccc-gold);
+  color: #0a1628;
+  border: none;
+  font-weight: 700;
+}
+
+.yccc-nav .nav-login:hover {
+  filter: brightness(1.08);
+}
+
+.yccc-hero {
+  position: relative;
+  min-height: min(72vw, 520px);
+  max-height: 560px;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  background: #0a1628;
+}
+
+.yccc-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: center / cover no-repeat url("/assets/yccc/hero.webp");
+}
+
+.yccc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgb(7 20 34 / 0.15) 0%,
+    rgb(7 20 34 / 0.55) 55%,
+    rgb(7 20 34 / 0.92) 100%
+  );
+}
+
+.yccc-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3.5rem;
+  width: 100%;
+}
+
+.yccc-hero-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--yccc-gold);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.yccc-hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  max-width: 22ch;
+}
+
+.yccc-hero-tagline {
+  margin: 0;
+  max-width: 32ch;
+  font-size: 0.9375rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+.yccc-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+.yccc-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.yccc-section-head h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #0c2340;
+}
+
+.yccc-link {
+  color: #0f4c81;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.yccc-link:hover {
+  text-decoration: underline;
+}
+
+.yccc-matches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: -2.25rem;
+  position: relative;
+  z-index: 2;
+  padding: 0.75rem 1.25rem 2.25rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.yccc-match-card {
+  background: center / cover no-repeat url("/assets/yccc/match-panel-bg.webp");
+  border-radius: 14px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 12px 40px rgb(7 20 34 / 0.35);
+  border: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.yccc-match-card-inner {
+  padding: 1.35rem 1.25rem 1.35rem;
+  background: linear-gradient(135deg, rgb(7 20 34 / 0.88), rgb(12 35 64 / 0.92));
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.yccc-match-card-head {
+  text-align: center;
+  margin-bottom: 0.35rem;
+}
+
+.yccc-match-kicker {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--yccc-gold);
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+}
+
+.yccc-match-date {
+  font-size: 0.875rem;
+  color: #e2e8f0;
+  line-height: 1.4;
+  margin: 0 auto 1rem;
+  max-width: 26rem;
+}
+
+.yccc-match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.yccc-team-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-align: center;
+  max-width: 8rem;
+}
+
+.yccc-team-pill img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.yccc-vs {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+}
+
+.yccc-venue {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #cbd5e1;
+  margin: 0.65rem 0 1rem;
+}
+
+.yccc-match-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.yccc-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--yccc-gold);
+  color: #0a1628;
+}
+
+.yccc-pill-btn--ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgb(255 255 255 / 0.35);
+}
+
+.yccc-news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.yccc-news-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgb(15 23 42 / 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.yccc-news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.yccc-news-body {
+  padding: 1rem 1.1rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.yccc-news-meta {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.35rem;
+}
+
+.yccc-news-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.3;
+  color: #0c2340;
+}
+
+.yccc-news-card p {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: #475569;
+  flex: 1;
+}
+
+.yccc-readmore {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #0f4c81;
+  text-decoration: none;
+}
+
+.yccc-readmore:hover {
+  text-decoration: underline;
+}
+
+.yccc-foundation {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  background: #0c2340;
+  color: #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .yccc-foundation {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.yccc-foundation img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+}
+
+.yccc-foundation-copy {
+  padding: 1.75rem 1.5rem;
+}
+
+.yccc-foundation-copy h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  color: #fff;
+}
+
+.yccc-foundation-copy h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: var(--yccc-gold);
+  font-weight: 700;
+}
+
+.yccc-foundation-copy p {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+  color: #cbd5e1;
+}
+
+.yccc-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.yccc-result-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  background: #fff;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgb(15 23 42 / 0.06);
+}
+
+.yccc-result-row img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.yccc-result-main {
+  min-width: 0;
+}
+
+.yccc-result-main strong {
+  display: block;
+  font-size: 0.875rem;
+  color: #0c2340;
+}
+
+.yccc-result-meta {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.yccc-result-tag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0f4c81;
+  background: #e0f2fe;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.yccc-teams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.yccc-team-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgb(15 23 42 / 0.06);
+}
+
+.yccc-team-card img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  margin: 0 auto 0.75rem;
+  display: block;
+  object-fit: contain;
+}
+
+.yccc-team-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0c2340;
+}
+
+.yccc-discover {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.yccc-discover-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 200px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.yccc-discover-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.yccc-discover-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 20%, rgb(7 20 34 / 0.92));
+}
+
+.yccc-discover-card h3,
+.yccc-discover-card p,
+.yccc-discover-card span {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0 1.1rem;
+}
+
+.yccc-discover-card h3 {
+  font-size: 1.125rem;
+  padding-top: 3rem;
+}
+
+.yccc-discover-card p {
+  font-size: 0.8125rem;
+  color: #cbd5e1;
+  margin-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+.yccc-discover-card span {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--yccc-gold);
+  padding-bottom: 1.1rem;
+}
+
+.yccc-shop {
+  background: linear-gradient(135deg, #0c2340, #071422);
+  color: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.yccc-shop h2 {
+  margin: 0 0 0.5rem;
+}
+
+.yccc-shop p {
+  margin: 0 0 1.25rem;
+  color: #cbd5e1;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.yccc-shop-btn {
+  display: inline-flex;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  background: var(--yccc-gold);
+  color: #0a1628;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.yccc-newsletter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 14px rgb(15 23 42 / 0.06);
+}
+
+@media (min-width: 768px) {
+  .yccc-newsletter {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+.yccc-newsletter img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+.yccc-newsletter h3 {
+  margin: 0 0 0.5rem;
+  color: #0c2340;
+}
+
+.yccc-newsletter p {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.yccc-input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.yccc-input-row input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.yccc-input-row button {
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+  border: none;
+  background: #0c2340;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.yccc-footer {
+  background: #050d18;
+  color: #94a3b8;
+  margin-top: 2rem;
+  padding: 2rem 1.25rem 2.5rem;
+  font-size: 0.8125rem;
+}
+
+.yccc-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.yccc-sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem 1.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.yccc-sponsors img {
+  height: clamp(22px, 3vw, 34px);
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.yccc-footer-note {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 1rem;
+  line-height: 1.5;
+}
+
+.yccc-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.yccc-footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.yccc-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.yccc-copyright {
+  text-align: center;
+  margin: 1.25rem 0 0;
+  font-size: 0.75rem;
+  color: #64748b;
+}
