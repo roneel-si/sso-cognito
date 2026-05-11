@@ -117,16 +117,21 @@
 .yccc-hero-bg {
   position: absolute;
   inset: 0;
-  background: center / cover no-repeat url("/assets/yccc/hero.webp");
+  /* Anchor to top so `cover` does not crop the subject’s head (center crops top+bottom). */
+  background-image: url("/assets/yccc/hero.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
 }
 
 .yccc-hero-overlay {
   position: absolute;
   inset: 0;
+  /* Lighter at the top so the upper part of the photo is not read as a “second header” bar. */
   background: linear-gradient(
     180deg,
-    rgb(7 20 34 / 0.15) 0%,
-    rgb(7 20 34 / 0.55) 55%,
+    rgb(7 20 34 / 0.08) 0%,
+    rgb(7 20 34 / 0.45) 48%,
     rgb(7 20 34 / 0.92) 100%
   );
 }
